@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="JuneOne">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;上一篇博文介绍了博客的基础搭建，这一篇主要介绍怎么个性化配置Next主题，使你的博客更加符合你的风格。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-21T13:36:19.792Z">
+<meta property="og:updated_time" content="2018-05-08T03:40:31.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NexT主题个性化配置">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;上一篇博文介绍了博客的基础搭建，这一篇主要介绍怎么个性化配置Next主题，使你的博客更加符合你的风格。">
@@ -357,9 +357,15 @@
 <p>多标签的语法格式如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tags:</div><div class="line">- 标签1</div><div class="line">- 标签2</div><div class="line">- 标签3</div></pre></td></tr></table></figure></p>
 <p>或者<code>tags: [标签1, 标签2]</code></p>
 <p>注：1. 菜单栏的其他选项也可以用同样的方法创建并使用<br>&emsp;&emsp;2. 在删掉tags和categories后，如若发现标签及分类数统计不对，可以执行<code>hexo clean</code></p>
-<h3 id="文章阅读量"><a href="#文章阅读量" class="headerlink" title="文章阅读量"></a>文章阅读量</h3><p>创建应用，比如应用名是View，创建完成后点击View，在存储中点击创建Class，Class名称填Counter，完成创建Class。在设置中点击应用Key，在/themes/next/_config.yml中搜素leancloud_visitors，将App ID和App Key相应替换为<code>#&lt;app_id&gt;</code>和<code>#&lt;app_key&gt;</code></p>
+<h3 id="文章阅读量"><a href="#文章阅读量" class="headerlink" title="文章阅读量"></a>文章阅读量</h3><p>使用的是<a href="https://leancloud.cn" target="_blank" rel="external">LeanCloud平台</a>统计，具体步骤如下：</p>
+<ul>
+<li>在注册完进入主页后，点击「应用」-&gt;「创建新应用」（比如应用名是View，完成创建） -&gt;点击「View」-&gt;选择「存储」-&gt;点击「创建Class」(Class名称填Counter，直接选择创建Class）</li>
+<li>选择「设置」-&gt;点击「应用Key」；在/themes/next/_config.yml中搜素leancloud_visitors，将App ID和App Key相应替换为<code>#&lt;app_id&gt;</code>和<code>#&lt;app_key&gt;</code></li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">leancloud_visitors:</div><div class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></div><div class="line">  app_id: <span class="comment">#&lt;app_id&gt;</span></div><div class="line">  app_key: <span class="comment">#&lt;app_key&gt;</span></div></pre></td></tr></table></figure>
-<p>在设置中点击安全中心，在web安全域名填入博客的网址</p>
+<ul>
+<li>在「设置」中点击「安全中心」，在「Web安全域名」填入您博客的网址</li>
+</ul>
 <h3 id="访问量"><a href="#访问量" class="headerlink" title="访问量"></a>访问量</h3><p>NexT主题自带了卜算子计数功能，在/themes/next/_config.yml中搜索busuanzi，将enable值改为true，最终内容如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">busuanzi_count:</div><div class="line">  <span class="comment"># count values only if the other configs are false</span></div><div class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></div><div class="line">  <span class="comment"># custom uv span for the whole site</span></div><div class="line">  site_uv: <span class="literal">true</span></div><div class="line">  site_uv_header: &lt;i class=<span class="string">"fa fa-user"</span>&gt;&lt;/i&gt; 访问人数</div><div class="line">  site_uv_footer:</div><div class="line">  <span class="comment"># custom pv span for the whole site</span></div><div class="line">  site_pv: <span class="literal">true</span></div><div class="line">  site_pv_header: &lt;i class=<span class="string">"fa fa-eye"</span>&gt;&lt;/i&gt; 总访问量</div><div class="line">  site_pv_footer: 次</div><div class="line">  <span class="comment"># custom pv span for one page only</span></div><div class="line">  page_pv: <span class="literal">false</span></div><div class="line">  page_pv_header: &lt;i class=<span class="string">"fa fa-file-o"</span>&gt;&lt;/i&gt;</div><div class="line">  page_pv_footer:</div></pre></td></tr></table></figure>
 <h3 id="社交链接"><a href="#社交链接" class="headerlink" title="社交链接"></a>社交链接</h3><p>在Hexo/themes/next/config.yml配置文件中搜索social，去掉social以及需要的社交链接前的#，并将链接地址改为正确的网址。<br>其中seoial_icons节点中后面的值是<a href="http://fontawesome.io/icons/" target="_blank" rel="external">http://fontawesome.io/icons/</a> 中提供的图标的名称。之后其他链接如推特，微博等都可自行增减。</p>
@@ -500,7 +506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
