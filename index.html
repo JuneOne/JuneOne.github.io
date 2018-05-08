@@ -483,156 +483,10 @@
       
         
           
-            <h1 id="include"><a href="#include" class="headerlink" title="include "></a>include <stdio.h></stdio.h></h1><h1 id="include-1"><a href="#include-1" class="headerlink" title="include "></a>include <stdlib.h></stdlib.h></h1><p>void main (void)<br>{<br>int num = 100;<br>char str[25];<br>itoa(num, str, 10);<br>printf(“The number ‘num’ is %d and the string ‘str’ is %s. \n” ,<br>num, str);<br>}</p>
+            <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line">\<span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line"><span class="keyword">int</span> num = <span class="number">100</span>;</div><div class="line"><span class="keyword">char</span> str[<span class="number">25</span>];</div><div class="line">itoa(num, str, <span class="number">10</span>);</div><div class="line"><span class="built_in">printf</span>(<span class="string">"The number 'num' is %d and the string 'str' is %s. \n"</span> ,</div><div class="line">num, str);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>itoa()函数有3个参数：第一个参数是要转换的数字，第二个参数是要写入转换结果的目标字符串，第三个参数是转移数字时所用 的基数。在上例中，转换基数为10。10：十进制；2：二进制…</p>
 <p>itoa并不是一个标准的C函数，它是Windows特有的，如果要写跨平台的程序，请用sprintf。是Windows平台下扩展的，标准库中有sprintf，功能比这个更强，用法跟printf类似：</p>
 <p>char str[255];<br>sprintf(str, “%x”, 100); //将100转为16进制表示的字符串。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/11/Excel-VBA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="JuneOne">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/onedream.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JuneOne">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/11/Excel-VBA/" itemprop="url">Excel VBA</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T16:19:21+08:00">
-                2018-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/11/Excel-VBA/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/04/11/Excel-VBA/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-             <span id="/2018/04/11/Excel-VBA/" class="leancloud_visitors" data-flag-title="Excel VBA">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <center><embed src="/img/3150102138-王俊-Assignment1.pdf" width="850" height="600"></center>
-
-<p>DateDiff(“d”, d1, d2)<br>d = DateAdd(“m”, month, date)</p>
-<p>WorksheetFunction.YearFrac()<br>YearFrac( , , Arg3) 0 or omitted    US (NASD) 30/360<br>                    1                Actual/actual<br>                    2                Actual/360<br>                    3                Actual/365<br>                    4                European 30/360</p>
 
           
         
@@ -1306,7 +1160,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
